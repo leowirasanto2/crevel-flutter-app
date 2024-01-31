@@ -14,7 +14,6 @@ class CustomSectionItemWidget extends StatelessWidget {
       mainAxisAlignment: MainAxisAlignment.center,
       children: [
         Container(
-          height: 26,
           padding: const EdgeInsets.only(left: 16, right: 16),
           child: Text(
             section.title ?? '',
@@ -25,6 +24,48 @@ class CustomSectionItemWidget extends StatelessWidget {
           ),
         ),
         SizedBox(
+          height: 100,
+          child: ListView(
+            scrollDirection: Axis.horizontal,
+            shrinkWrap: true,
+            children: [
+              const SizedBox(
+                width: 16,
+              ),
+              Container(
+                color: Colors.red,
+                height: 100,
+                width: 200,
+              ),
+              const SizedBox(
+                width: 16,
+              ),
+              Container(
+                color: Colors.blue,
+                height: 100,
+                width: 200,
+              ),
+              const SizedBox(
+                width: 16,
+              ),
+              Container(
+                color: Colors.amberAccent,
+                height: 100,
+                width: 200,
+              ),
+              const SizedBox(
+                width: 16,
+              ),
+            ],
+          ),
+        )
+      ],
+    );
+  }
+}
+
+/*
+SizedBox(
           height: 232,
           child: ListView.builder(
             itemBuilder: (context, index) {
@@ -48,7 +89,4 @@ class CustomSectionItemWidget extends StatelessWidget {
             shrinkWrap: true,
           ),
         ),
-      ],
-    );
-  }
-}
+ */
